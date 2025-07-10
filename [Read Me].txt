@@ -1,0 +1,46 @@
+Kill Notify Script
+A FiveM script that displays notifications when a player kills or is killed by another player in GTA V.
+Author
+Created by Kylo
+Features
+
+Displays a notification when you kill another player, showing their name, ID, and distance.
+Displays a notification when you are killed by another player, showing their name, ID, and distance.
+Notifications include icons and customizable positioning.
+Utilizes the ox_lib framework for reliable and customizable notifications.
+Supports Lua 5.4 and runs on the Cerulean FX version for FiveM.
+
+Requirements
+
+ox_lib (included as a shared script in fxmanifest.lua)
+
+Installation
+
+Download the script files (fxmanifest.lua, client.lua, server.lua).
+Place the script folder in your FiveM server's resources directory.
+Ensure ox_lib is installed and running on your server.
+Add ensure killnotify to your server.cfg to load the script.
+
+Configuration
+Changing Notification Position
+To change the position of the notification, modify the position field in the lib.notify call within client.lua. The default position is set to 'top'. Available options are:
+
+'top'
+'top-right'
+'top-left'
+'bottom'
+'bottom-right'
+'bottom-left'
+'center-right'
+'center-left'
+
+Locate the following code in client.lua:
+position = 'top', --'top' or 'top-right' or 'top-left' or 'bottom' or 'bottom-right' or 'bottom-left' or 'center-right' or 'center-left'
+
+Change 'top' to your desired position from the list above.
+Example
+To display notifications in the bottom-right corner, update the code to:
+position = 'bottom-right',
+
+Support
+For support, join our Discord: discord.gg/kylo
